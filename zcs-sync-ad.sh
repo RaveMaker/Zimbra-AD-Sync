@@ -1,6 +1,7 @@
 #!/bin/bash
 # zcs-sync-ad.sh syncs AD users and Zimbra users
 
+# Folder settings
 LDAPSEARCH=/opt/zimbra/bin/ldapsearch
 ZMPROV=/opt/zimbra/bin/zmprov
 TMP_DIR=/scripts
@@ -16,13 +17,13 @@ LDAP_SERVER="ldap://dc01.domain.com"
 BASEDN="dc=domain,dc=com"
 BINDDN="CN=USERNAME,OU=MYOU,DC=domain,DC=com"
 BINDPW="PASSWORD"
+FIELDS="mail"
 
 # Only add members of AD group "Zimbra" in OU Users
 FILTER="(&(sAMAccountName=*)(objectClass=user)(givenName=*)(memberOf=cn=Zimbra,cn=Users,dc=domain,dc=com))"
 
 # Add all AD users
 #FILTER="(&(sAMAccountName=*)(objectClass=user)(givenName=*))"
-FIELDS="mail"
 
 # Clean up users list
 rm -f $ADS_TMP $ZCS_TMP $DIF_TMP
@@ -80,4 +81,5 @@ read -p "Keep user lists [y/N]?"
 if [ "$REPLY" != "y" ] && [ "$REPLY" != "Y" ]; then
     rm -f $ADS_TMP $ZCS_TMP $DIF_TMP;
 fi
-
+echo ""
+echo "Done"

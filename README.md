@@ -11,4 +11,3 @@ Zimbra Collaboration Suite Mailboxs Active Directory Users Sync
 
 by [RaveMaker][RaveMaker].
 [RaveMaker]: http://ravemaker.net
-
