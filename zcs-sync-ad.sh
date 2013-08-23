@@ -3,7 +3,6 @@
 
 LDAPSEARCH=/opt/zimbra/bin/ldapsearch
 ZMPROV=/opt/zimbra/bin/zmprov
-DOMAIN_NAME="domain.com"
 TMP_DIR=/scripts
 HOME_DIR=/scripts
 EXCLUDE_FILE=exclude.txt
@@ -12,6 +11,7 @@ ZCS_TMP=$TMP_DIR/users_zcs.lst
 DIF_TMP=$TMP_DIR/users_dif.lst
 
 # Server values
+DOMAIN_NAME="domain.com"
 LDAP_SERVER="ldap://dc01.domain.com"
 BASEDN="dc=domain,dc=com"
 BINDDN="CN=USERNAME,OU=MYOU,DC=domain,DC=com"
