@@ -1,5 +1,7 @@
+Zimbra-AD-Sync
+==============
+
 Zimbra Collaboration Suite Mailboxs Active Directory Users Sync
-===============================================================
 
 ### Installation
 
