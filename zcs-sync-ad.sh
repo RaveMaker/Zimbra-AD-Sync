@@ -1,5 +1,7 @@
 #!/bin/bash
 # zcs-sync-ad.sh syncs AD users and Zimbra users
+#
+# by RaveMaker - http://ravemaker.net
 
 # Folder settings
 LDAPSEARCH=/opt/zimbra/bin/ldapsearch
