@@ -3,29 +3,19 @@
 #
 # by RaveMaker - http://ravemaker.net
 
+# Load settings
+if [ -f settings.cfg ] ; then
+    echo "Loading settings..."
+    source settings.cfg
+else
+    echo "ERROR: Create settings.cfg (from settings.cfg.example)"
+    exit
+fi;
+
 # Folder settings
-LDAPSEARCH=/opt/zimbra/bin/ldapsearch
-ZMPROV=/opt/zimbra/bin/zmprov
-TMP_DIR=/scripts
-HOME_DIR=/scripts
-EXCLUDE_FILE=exclude.txt
 ADS_TMP=$TMP_DIR/users_ads.lst
 ZCS_TMP=$TMP_DIR/users_zcs.lst
 DIF_TMP=$TMP_DIR/users_dif.lst
-
-# Server values
-DOMAIN_NAME="domain.com"
-LDAP_SERVER="ldap://dc01.domain.com"
-BASEDN="dc=domain,dc=com"
-BINDDN="CN=USERNAME,OU=MYOU,DC=domain,DC=com"
-BINDPW="PASSWORD"
-FIELDS="mail"
-
-# Only add members of AD group "Zimbra" in OU Users
-FILTER="(&(sAMAccountName=*)(objectClass=user)(givenName=*)(memberOf=cn=Zimbra,cn=Users,dc=domain,dc=com))"
-
-# Add all AD users
-#FILTER="(&(sAMAccountName=*)(objectClass=user)(givenName=*))"
 
 # Clean up users list
 rm -f $ADS_TMP $ZCS_TMP $DIF_TMP
