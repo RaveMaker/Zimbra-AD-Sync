@@ -7,7 +7,7 @@ Zimbra Collaboration Suite Mailboxs Active Directory Users Sync
 
 1. Clone this script from github or copy the files manually to your prefered directory.
 
-2. Edit the zcs-sync-ad.sh file and replace the server values and domain.
+2. Create settings.cfg from settings.cfg.example and change:
 
 3. Create an AD group called Zimbra or edit the filter to include the entire AD.
 
