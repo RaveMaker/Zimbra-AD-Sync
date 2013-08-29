@@ -19,9 +19,10 @@ BINDDN="CN=USERNAME,OU=MYOU,DC=domain,DC=com"
 BINDPW="PASSWORD"
 FIELDS="mail"
 
-# Only add members of AD group "Zimbra" in OU Users
-FILTER="(&(sAMAccountName=*)(objectClass=user)(givenName=*)(memberOf=cn=Zimbra,cn=Users,dc=domain,dc=com))"
+# Select one of the following FILTERs and remove the REM - "#"
+# 1. Only add members of AD group "Zimbra" in OU Users
+#FILTER="(&(sAMAccountName=*)(objectClass=user)(givenName=*)(memberOf=cn=Zimbra,cn=Users,$BASEDN))"
 
-# Add all AD users
+# 2. Add all AD users
 #FILTER="(&(sAMAccountName=*)(objectClass=user)(givenName=*))"
 
