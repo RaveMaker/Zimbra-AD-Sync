@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # zcs-sync-ad.sh syncs AD users and Zimbra users
 #
 # by RaveMaker - http://ravemaker.net
