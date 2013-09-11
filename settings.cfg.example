@@ -20,7 +20,7 @@ BINDPW="PASSWORD"
 FIELDS="mail"
 
 # Only add members of AD group "Zimbra" in OU Users
-FILTER="(&(sAMAccountName=*)(objectClass=user)(givenName=*)(memberOf=cn=Zimbra,cn=Users,dc=domain,dc=com))"
+#FILTER="(&(sAMAccountName=*)(objectClass=user)(givenName=*)(memberOf=cn=Zimbra,cn=Users,$BASEDN))"
 
 # Add all AD users
 #FILTER="(&(sAMAccountName=*)(objectClass=user)(givenName=*))"
