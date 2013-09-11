@@ -24,7 +24,7 @@ Zimbra Collaboration Suite Mailboxs Active Directory Users Sync
 	    BINDPW="PASSWORD"
 	    FIELDS="mail"
 
-#### Create an AD group called Zimbra or edit the filter to include the entire AD:
+#### Create an AD group called Zimbra or use the filter to include the entire AD:
 
 ##### Only add members of AD group "Zimbra" in OU Users
 	    #FILTER="(&(sAMAccountName=*)(objectClass=user)(givenName=*)(memberOf=cn=Zimbra,cn=Users,$BASEDN))"
