@@ -33,5 +33,6 @@ Zimbra Collaboration Suite Mailboxs Active Directory Users Sync
 	    #FILTER="(&(sAMAccountName=*)(objectClass=user)(givenName=*))"
 
 
-by [RaveMaker][RaveMaker].
+Author: [RaveMaker][RaveMaker].
+
 [RaveMaker]: http://ravemaker.net
